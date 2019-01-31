@@ -1,0 +1,12 @@
+nav a{
+  display: block;
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  font-family: trebuchet, sans-serif;
+  padding: 15px;
+}
+
+nav a.currentpage{
+  text-decoration: underline;
+}
