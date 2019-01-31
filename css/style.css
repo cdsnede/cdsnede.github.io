@@ -1,5 +1,18 @@
+body{
+    background-color: white;
+}
+h1, h2, h3, h4, h5, h6, p {
+    color: black;
+}
+
+nav li{
+    float: left;
+    background-color: #e5e5e2;
+}
+
 nav a{
   display: block;
+  padding: 8px;
   list-style-type: none;
   text-decoration: none;
   color: black;
@@ -10,3 +23,9 @@ nav a{
 nav a.currentpage{
   text-decoration: underline;
 }
+
+/* code for desktop
+nav li a:hover:not(.currentpage){
+  text-decoration: underline;
+}
+*/
