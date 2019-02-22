@@ -73,7 +73,10 @@ nav ul li {
   display: flex;
   justify-content: center;
 }
-
+.thumb img {
+  width: 50%;
+  height: 50%;
+}
 .thumb_text h2{
   display: flex;
   justify-content: center;
