@@ -2,21 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Resume - UXorigami</title>
   </head>
   <body>
-    <a href="#main-content">Skip to main content</a>
+    <div class="skiptocontent"><a href="#main-content">Skip to main content</a></div>
 
     <header>
       <h1>Resume</h1>
-      <img src="images/uxorigami_logo_small.png" alt="logo for UX origami"/>
-      <p>Portfolio of Courtney Snede</p>
-
-      <nav>
+      <nav id='sidenav'>
+        <img src="images/uxorigami_logo_small.png" alt="logo for UX origami"/>
+        <p id='tagline'>Portfolio of Courtney Snede</p>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
@@ -115,9 +116,9 @@
     </main>
     <footer>
       <ul>
-        <li>uxorigami@gmail.com</li>
-        <li>586.231.1510</li>
-        <li><a href="https://www.linkedin.com/in/courtney-snede/">LinkedIn</a></li>
+        <li><i class="far fa-envelope" aria-label="email icon"></i>&nbsp;<a href="mailto:uxorigami@gmail.com">uxorigami@gmail.com</a></li>
+        <li><i class="fas fa-mobile-alt" aria-label="phone icon"></i>&nbsp;586.231.1510</li>
+        <li><i class="fab fa-linkedin-in" aria-label="LinkedIn logo"></i>&nbsp;<a href="https://www.linkedin.com/in/courtney-snede/">LinkedIn</a></li>
       </ul>
       <p>Web Design &copy;UXorigami</p>
     </footer>
