@@ -2,22 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/html5reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <title>Simple Flask App - UXorigami</title>
   </head>
   <body>
-    <a href="#main-content">Skip to main content</a>
+    <div class="skiptocontent"><a href="#main-content">Skip to main content</a></div>
 
     <header>
       <h1>Simple Flask App</h1>
 
-      <img src="../images/uxorigami_logo_small.png" alt="logo for UX origami"/>
-      <p>Portfolio of Courtney Snede</p>
-
-      <nav>
+      <nav id='sidenav'>
+        <img src="../images/uxorigami_logo_small.png" alt="logo for UX origami"/>
+        <p id='tagline'>Portfolio of Courtney Snede</p>
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../portfolio.html">Portfolio</a></li>
@@ -28,13 +29,14 @@
     </header>
 
     <main id="main-content">
-      <section>
+
+      <section class="project_description">
         <img src="../images/icons/orange_my_role.jpg" alt="icon of woman"/>
         <h2>My Role</h2>
         <p>Individual project for my Intensive Python class. This took about 1 week to make.</p>
       </section>
 
-      <section>
+      <section class="project_description">
         <img src="../images/icons/green_project.jpg" alt="icon of push pin"/>
         <h2>Project</h2>
         <p>This is a simple Flask app written with Python.
@@ -43,7 +45,7 @@
           Users can (1) input their zip code, (2) see a list of fast food chains nearby, (3) choose one, and (2) see a list of menu items (names and photos) at that restaurant that are under 800 calories and 100 carbs. Those numbers are based on Livestrong’s per-meal recommendations, with a little leeway, because, well, it’s fast food.</p>
       </section>
 
-      <section>
+      <section class="project_description">
         <img src="../images/icons/blue_prototype.jpg" alt="icon of gears"/>
         <h2>Code</h2>
         <p>I’ll share my Github link once its graded and API keys are removed.
@@ -54,24 +56,26 @@
           Caching with requests_cache</p>
       </section>
 
-      <section>
+      <section class="project_description">
         <img src="../images/icons/orange_results.jpg" alt="icon of graph showing growth"/>
         <h2>Screenshots</h2>
         <p>Get ready to see some vintage HTML circa Web 1.0!</p>
       </section>
 
-      <section>
+      <section class="project_description">
         <h2>Screenshots</h2>
-        <img src="../images/flask_screenshot1.png" alt="screenshot showing a snippet of Python code"/>
-        <img src="../images/flask_screenshot2.png" alt="example output of the program showing names and photos of McDonald's food"/>
-        <img src="../images/flask_screenshot3.png" alt="example output of the program showing a list of fast food chains with names and addresses"/>
+        <div class="project_gallery">
+          <img src="../images/flask_screenshot1.png" alt="screenshot showing a snippet of Python code"/>
+          <img src="../images/flask_screenshot2.png" alt="example output of the program showing names and photos of McDonald's food"/>
+          <img src="../images/flask_screenshot3.png" alt="example output of the program showing a list of fast food chains with names and addresses"/>
+        </div>
       </section>
     </main>
     <footer>
       <ul>
-        <li>uxorigami@gmail.com</li>
-        <li>586.231.1510</li>
-        <li><a href="https://www.linkedin.com/in/courtney-snede/">LinkedIn</a></li>
+        <li><i class="far fa-envelope" aria-label="email icon"></i>&nbsp;<a href="mailto:uxorigami@gmail.com">uxorigami@gmail.com</a></li>
+        <li><i class="fas fa-mobile-alt" aria-label="phone icon"></i>&nbsp;586.231.1510</li>
+        <li><i class="fab fa-linkedin-in" aria-label="LinkedIn logo"></i>&nbsp;<a href="https://www.linkedin.com/in/courtney-snede/">LinkedIn</a></li>
       </ul>
       <p>Web Design &copy;UXorigami</p>
     </footer>
