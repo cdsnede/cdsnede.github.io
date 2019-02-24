@@ -267,7 +267,7 @@ footer li {
     align-items: center;
   }
   .gallery_thumb img {
-    padding: 3em;
+    padding: 3em 3em 0 3em;
     width: 70%;
   }
   .gallery_thumb_text{
@@ -276,6 +276,7 @@ footer li {
   .gallery_thumb_text h2 {
     font-family: 'Oswald';
     font-weight: bold;
+    text-align: center;
     font-size: 1.5em;
     margin-bottom: 5%;
     line-height: 1.25;
