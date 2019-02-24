@@ -276,12 +276,12 @@ footer li {
   .gallery_thumb_text h2 {
     font-family: 'Oswald';
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 5%;
     line-height: 1.25;
   }
   .gallery_thumb_text p {
-    font-size: 1.25em;
+    font-size: 1em;
     line-height: 1.5;
     margin-bottom: 5%;
   }
