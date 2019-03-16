@@ -30,7 +30,7 @@ Try setting this property for your "homeaddress" element in your setHomeAddress(
 
 Step 5: Toggling the Home Address
 
-done 
+done
 Now when you test your form, you'll notice that when you un-check your checkbox, the home address field isn't enabled.
 Add an if-else statement to your setHomeAddress() function so that when the checkbox is un-checked the Home address field is reset to empty and enabled again.-->
 	<meta charset="UTF-8">
@@ -47,7 +47,9 @@ Add an if-else statement to your setHomeAddress() function so that when the chec
 					document.querySelector("#home").value = billinginfo;
 					document.querySelector("#home").disabled= true;
 				}
+
 				else {
+					document.querySelector("#home").value= "";
 					document.querySelector("#home").disabled= false;
 				}
 
