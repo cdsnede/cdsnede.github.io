@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content="width=device-width, initial-scale=1">
+	<title>Canvas Example</title>
+	<style type="text/css">
+		canvas{
+			border: 1px solid black;
+		}
+	</style>
+	<script
+src="http://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<canvas id="canvas" width="500" height="300">
+  An alternative text describing what your canvas displays.
+</canvas>
+
+<script>
+
+  var c = document.getElementById("canvas");
+  var ctx = c.getContext("2d");
+  var x = 0;
+  var y = 0;
+  var color = 'red';
+  var radius = 5;
+  var k = ""
+
+	var cw = (canvas.clientWidth);
+	var ch = (canvas.clientHeight);
+	var ww = (window.innerWidth);
+	var wh = (window.innerHeight);
+	console.log(cw);
+	console.log(ch);
+	console.log(ww);
+	console.log(wh);
+
+
+  function draw(){
+  ctx.beginPath();
+  ctx.fillStyle=color;
+  ctx.arc(x,y,radius,0,2*Math.PI);
+  // x pos, y pos, radius, the rest = draw full circle
+  ctx.fill()
+}
+
+  function color(){
+  }
+
+
+	window.addEventListener("load", function(w) {
+	    c.height = wh*.8;
+			c.width = ww*.8;
+			// console.log("new");
+			draw()
+	})
+
+	window.addEventListener('mousemove', function (e) {
+	  x=e.offsetX;
+	  y=e.offsetY;
+
+	  // console.log(e.pageX);
+	  // console.log(e.pageY);
+	  draw()
+	})
+
+window.addEventListener('touchstart', function(ts) {
+	x=e.offsetX;
+	y=e.offsetY;
+	draw()
+})
+
+window.addEventListener('touchmove', function(tm) {
+	// draw();
+	x=e.offsetX;
+	y=e.offsetY;
+	draw()
+	})
+
+	// window.addEventListener('touchend', function(te) {
+	// 	x=e.offsetX;
+	// 	y=e.offsetY;
+	//
+	// 	})
+
+function mouseXY (e) {
+     var touches = e.touches || [];
+     var touch = touches[0] || {};
+     if (paint) {
+         addClick(touch.pageX - this.offsetLeft, touch.pageY - this.offsetTop - 40, true);
+         draw();
+     }
+}
+	// window.addEventListener('touchstart', function (s) {
+	// 	x=e.offsetX;
+	// 	y=e.offsetY;
+	//
+	// 	// console.log(e.pageX);
+	// 	// console.log(e.pageY);
+	// 	draw()
+	// })
+	// window.addEventListener('touchmove', function (t) {
+	// 	x=e.offsetX;
+	// 	y=e.offsetY;
+	//
+	// 	// console.log(e.pageX);
+	// 	// console.log(e.pageY);
+	// 	draw()
+	// })
+
+	window.addEventListener('keypress', function (k) {
+	  console.log(k.keyCode);
+	  if (k.keyCode == "32"){
+			ctx.clearRect(0,0,canvas.width,canvas.height);}
+		if (k.keyCode == "121") {
+			color = "yellow";
+		}
+		if (k.keyCode == "98") {
+			color = "blue";
+		}
+		if (k.keyCode == "114") {
+			color = "red";
+		}
+		if (k.keyCode == "103") {
+			color = "green";
+		}
+	  console.log(color);
+	  draw();
+	})
+
+	window.addEventListener('keydown', function(a){
+		// console.log(a.keyCode);
+		// up = 38
+		// down = 40
+		if (a.keyCode == "38") {
+			radius = radius+1;
+		}
+		if (a.keyCode == "40" && radius != 1) {
+			radius = radius - 1;
+			console.log(radius)
+		}
+	})
+
+
+
+	window.addEventListener("orientationchange", function(o) {
+			ctx.clearRect(0,0,canvas.width,canvas.height);})
+
+
+
+
+
+
+	//Rectangles
+// 	var canvas = document.querySelector('canvas');
+// 	var ctx = canvas.getContext('2d');
+// 	ctx.fillStyle = 'green';
+// 	ctx.fillRect(200, 200, 100, 100);
+// 	// ^fill position x, fill position y, width, height
+// 	// ctx.strokeRect(225,225,50,50); outline
+// 	ctx.fillStyle = 'red';
+// 	ctx.arc(250,250,25,0,2*Math.PI);
+// 	// ^pos x, pos y, radius, 0 & 2 needed to make full circle instead of just arc
+// 	ctx.fill();
+// 	ctx.clearRect(250,250,10,10);
+// 	//Paths
+// 	// https://www.html5canvastutorials.com/tutorials/html5-canvas-arcs/
+// 	// arc(x, y, radius, startAngle, endAngle, anticlockwise)
+// 	// closePath() connects the first point with the last point
+// 	ctx.beginPath();					 //quit old drawing, start new one
+// 	ctx.arc(75,75,50,0,Math.PI*2,true);  // Outer circle
+// 	// ctx.moveTo(110,75);
+// 	// ctx.arc(75,75,35,0,Math.PI,false);   // Mouth
+// 	ctx.moveTo(55,100);
+// 	// ^ move to = lift pen. false/true = clockwise/counterclockwise
+// 	ctx.arc(75,100,20,Math.PI*1,0,false);   // Mouth
+// 	ctx.moveTo(65,65);
+// 	ctx.arc(60,65,5,0,Math.PI*2,true);  // Left eye
+// 	ctx.moveTo(95,65);
+// 	ctx.arc(90,65,5,0,Math.PI*2,true);  // Right eye
+// 	ctx.stroke();
+// 	//Lines
+// 	// Filled triangle
+// 	ctx.beginPath();
+// 	ctx.moveTo(425,345);
+// 	ctx.lineTo(425,425);
+// 	ctx.lineTo(345,345)
+// 	ctx.fillStyle = 'blue';
+// 	ctx.fill();
+// 	// Stroked triangle
+// 	ctx.beginPath();
+// 	ctx.moveTo(345,345);
+// 	ctx.lineTo(345,425);
+// 	ctx.lineTo(425,425);
+// 	ctx.closePath();
+// 	ctx.stroke();
+// 	//Text
+// 	ctx.fillStyle = '#00F';
+// 	ctx.font = 'Italic 30px Sans-Serif';
+// 	ctx.strokeText('Your Name', 50, 400);
+// 	ctx.font = 'Bold 30px Arial';
+// 	ctx.fillText('Different Font!', 250, 50);
+// 	function myFunction(){
+//     var x = document.getElementById("myFile");
+//     var txt = "";
+//     if ('files' in x) {
+//         if (x.files.length == 0) {
+//             txt = "Select a file";
+//         } else {
+//         	var img = new Image();
+//             img.src = "images/" + x.files[0].name;
+// 			img.onload = function(){
+// 				ctx.drawImage(img, 25, 300);
+// 				// ctx.drawImage(img, img.width / 4, img.height / 4, img.width / 2, img.height / 2, 0, 0, canvas.width, canvas.height);
+// 				ctx.fillStyle = '#00F';
+// 			ctx.font = 'Italic 30px Sans-Serif';
+// 			ctx.strokeText('Your Name', 50, 400);
+//       		}
+//       	}
+//       }
+//     else {
+//         if (x.value == "") {
+//             txt += "Select a file.";
+//         } else {
+//             txt += "The files property is not supported by your browser!";
+//             txt  += "<br>The path of the selected file: " + x.value; // If the browser does not support the files property, it will return the path of the selected file instead.
+//         }
+//     }
+//
+// }
+</script>
+
+	<!-- <br><input type="file" id="myFile" size="50" onchange="myFunction()"><br> -->
+
+</body>
+</html>
