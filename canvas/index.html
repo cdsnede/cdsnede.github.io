@@ -17,9 +17,11 @@ crossorigin="anonymous"></script>
 
 <body>
 	<canvas id="canvas" width="500" height="300">
-  An alternative text describing what your canvas displays.
+  Your browser doesn't support Canvas.
 </canvas>
-
+	<div id="color_picker">
+		<input type="color" id="color-input" value="#ff0000"></input>
+	</div>
 <script>
 
   var c = document.getElementById("canvas");
@@ -29,6 +31,7 @@ crossorigin="anonymous"></script>
   var color = 'red';
   var radius = 5;
   var k = ""
+	var colorPicker = document.querySelector("#color-input");
 
 	var cw = (canvas.clientWidth);
 	var ch = (canvas.clientHeight);
@@ -39,7 +42,6 @@ crossorigin="anonymous"></script>
 	console.log(ww);
 	console.log(wh);
 
-
   function draw(){
   ctx.beginPath();
   ctx.fillStyle=color;
@@ -47,9 +49,6 @@ crossorigin="anonymous"></script>
   // x pos, y pos, radius, the rest = draw full circle
   ctx.fill()
 }
-
-  function color(){
-  }
 
 
 	window.addEventListener("load", function(w) {
@@ -89,15 +88,19 @@ window.addEventListener('touchmove', function(tm) {
 			ctx.clearRect(0,0,canvas.width,canvas.height);}
 		if (k.keyCode == "121") {
 			color = "yellow";
+			colorPicker.value = "#ffff00";
 		}
 		if (k.keyCode == "98") {
 			color = "blue";
+			colorPicker.value = "#0000FF";
 		}
 		if (k.keyCode == "114") {
 			color = "red";
+			colorPicker.value = "#ff0000";
 		}
 		if (k.keyCode == "103") {
 			color = "green";
+			colorPicker.value = "#008000";
 		}
 	  console.log(color);
 	  draw();
@@ -125,7 +128,10 @@ window.addEventListener('touchmove', function(tm) {
 		})
 
 
-
+	colorPicker.addEventListener("input", function(cp) {
+		color = colorPicker.value;
+		console.log(color);
+	})
 
 
 
