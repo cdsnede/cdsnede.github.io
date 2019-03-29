@@ -69,15 +69,15 @@ crossorigin="anonymous"></script>
 	})
 
 window.addEventListener('touchstart', function(ts) {
-	x=e.offsetX;
-	y=e.offsetY;
+	x=ts.offsetX;
+	y=ts.offsetY;
 	draw()
 })
 
 window.addEventListener('touchmove', function(tm) {
 	// draw();
-	x=e.offsetX;
-	y=e.offsetY;
+	x=tm.offsetX;
+	y=tm.offsetY;
 	draw()
 	})
 
