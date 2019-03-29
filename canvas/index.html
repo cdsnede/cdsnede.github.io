@@ -9,11 +9,6 @@
 			border: 1px solid black;
 		}
 	</style>
-	<script
-src="http://code.jquery.com/jquery-3.3.1.js"
-integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-crossorigin="anonymous"></script>
-</head>
 
 <body>
 	<canvas id="canvas" width="500" height="300">
@@ -22,6 +17,7 @@ crossorigin="anonymous"></script>
 	<div id="color_picker">
 		<input type="color" id="color-input" value="#ff0000"></input>
 	</div>
+	<!-- Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color -->
 <script>
 
   var c = document.getElementById("canvas");
@@ -43,21 +39,21 @@ crossorigin="anonymous"></script>
 	console.log(wh);
 
   function draw(){
-  ctx.beginPath();
-  ctx.fillStyle=color;
-  ctx.arc(x,y,radius,0,2*Math.PI);
+  	ctx.beginPath();
+  	ctx.fillStyle=color;
+  	ctx.arc(x,y,radius,0,2*Math.PI);
   // x pos, y pos, radius, the rest = draw full circle
-  ctx.fill()
+  	ctx.fill()
 }
 
 
 	window.addEventListener("load", function(w) {
 	    c.height = wh*.8;
 			c.width = ww*.8;
-			// ctx.clearRect(-1,-1,canvas.width,canvas.height)
-			ctx.clearRect();
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+			// ctx.clearRect();
 			// console.log("new");
-			draw()
+			// draw()
 	})
 
 	window.addEventListener('mousemove', function (e) {
