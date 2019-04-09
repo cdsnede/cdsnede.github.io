@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript 2019a</title>
+	<script>
+		function check(){
+			var name = document.querySelector('#name').value;
+	    window.alert("Goodbye "+ name); // 1) Use an alert to say goodbye to the person, make sure you address the person by name, e.g. "Goodbye Colleen"
+
+			var nextsite = document.querySelector('#url').value;
+			if (nextsite) {
+				window.location.href = "url("+nextsite+")"
+			}
+}
+	           // 2) Update the form so that the action is updated to the person's favorite site.
+	</script>
+</head>
+<body>
+
+	<form  id = "form" onsubmit = "check()">
+		<label for ="name"> What is your name?</label>
+		<input type = "name" id = "name"><br>
+		<label for = "url">What is your favorite news site?</label>
+		<input type = "url" name ="url" id = "url"><br>
+		<input type = "submit">
+	</form>
+</body>
