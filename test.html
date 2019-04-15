@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138257414-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138257414-1');
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>UXorigami - Portfolio of Courtney Snede</title>
+
+    <style>
+    .dropdown-btn {
+      display: none;
+    }
+    /* button.dropdown-btn.active {
+      background-color: green;
+      color: white; */
+
+</style>
+  </head>
+  <body>
+    <div class="skiptocontent"><a href="#main-content">Skip to main content</a></div>
+
+    <header>
+      <h1>Current Projects</h1>
+
+      <nav id='sidenav'>
+        <a href="index.html"> <img src="images/uxorigami_logo_small.png" alt="logo for UX origami"/></a>
+        <p id='tagline'>Portfolio of Courtney Snede</p>
+        <ul>
+          <li><a class="currentpage" href="index.html">Home</a></li>
+          <li class="replaceDrop"><a href="portfolio.html">Portfolio</a></li>
+          <li><button class="dropdown-btn"><a href = "portfolio.html">Portfolio</a><i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-container">
+            <ul>
+                <li><a href ="projects/flask.html">Simple Flask App</a></li>
+                <li><a href ="projects/continq.html">Contextual Inquiry</a></li>
+                <li><a href ="projects/advocated.html">Interaction Design</a></li>
+                <li><a href ="projects/siwa.html">Website Redesign</a></li>
+              </ul>
+            </div>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main id="main-content">
+      <div class="big_projects">
+      <section class="project">
+        <div class='thumb'>
+          <img src="images/flask_thumbnail2.png" alt="photo of McDonald's Big Mac"/>
+        </div>
+        <div class='thumb_text'>
+          <h2>Simple Flask App</h2>
+          <p>Python project that shows users the healthiest menu items at their local fast food chains.</p>
+          <p><a href="projects/flask.html">Read More</a></p>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class='thumb'>
+          <img src="images/continq_thumbnail2.png" alt="photo of multi-colored sticky notes"/>
+        </div>
+        <div class='thumb_text'>
+          <h2>Contextual Inquiry & Consulting</h2>
+          <p>Project for a local information services company. Gathered and analyzed qualitative data to make recommendations that improve their sales process efficiency.</p>
+          <p><a href="projects/continq.html">Read More</a></p>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class='thumb'>
+          <img src="images/advocated_thumbnail2.png" alt="logo for AdvocatEd"/>
+        </div>
+        <div class='thumb_text'>
+          <h2>Interaction Design</h2>
+          <p>Mid-fi app prototype that allows parents of children with special needs to share information with each other about what school services their children receive.</p>
+          <p><a href="projects/advocated.html">Read More</a></p>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class='thumb'>
+          <img src="images/siwa_thumbnail.png" alt="logo for Seoul International Women's Association"/>
+        </div>
+        <div class='thumb_text'>
+          <h2>Website Redesign</h2>
+          <p>Led a team of 10 in redesigning Seoul International Women’s Association’s website.</p>
+          <p><a href="projects/siwa.html">Read More</a></p>
+        </div>
+      </section>
+    </div>
+    </main>
+    <footer>
+      <ul>
+        <li><i class="far fa-envelope" aria-label="email icon"></i>&nbsp;<a href="mailto:uxorigami@gmail.com">uxorigami@gmail.com</a></li>
+        <li><i class="fas fa-mobile-alt" aria-label="phone icon"></i>&nbsp;586.231.1510</li>
+        <li><i class="fab fa-linkedin-in" aria-label="LinkedIn logo"></i>&nbsp;<a href="https://www.linkedin.com/in/courtney-snede/">LinkedIn</a></li>
+      </ul>
+      <p>Web Design &copy;UXorigami</p>
+    </footer>
+    <script src="./js/dropdownnav.js"></script>
+  </body>
+</html>
