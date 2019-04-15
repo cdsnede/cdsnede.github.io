@@ -11,7 +11,7 @@
 
 body {
     background-color: #e5e5e2;
-    h1, h2, h3, h4, h5, h6, p color: black;
+    /* h1, h2, h3, h4, h5, h6, p color: black; */
     font-family: 'Roboto';
     display: grid;
     grid-template-columns: 1fr;
