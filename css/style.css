@@ -596,7 +596,7 @@ footer p {
     justify-content: center;
     padding: 1em;
     margin: 0 auto 0 auto;
-    width: 90%;
+    /* width: 90%; */
   }
 
   .project_description img {
