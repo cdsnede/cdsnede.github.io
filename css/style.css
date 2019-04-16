@@ -1,4 +1,7 @@
 /* top image rollovers */
+h1, h2, h3, h4, h5, h6, p {
+  color: black;
+}
 
 .top_project_image {
   position: relative;
@@ -212,7 +215,7 @@ nav a.currentpage{
 	padding:21px 64px;
 	text-decoration:none;
   margin: 2em;
-  min-width: 300px;
+  min-width: 200px;
 }
 .downloadButton:hover {
 	background-color:#000000;
