@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* carousel Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
+  color: black;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
