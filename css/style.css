@@ -364,11 +364,11 @@ nav ul li {
   font-family: 'Oswald';
   font-weight: bold;
   font-size: 2em;
-  margin: 2em;
+  margin: 2em 0;
 }
 
 .project_description p {
-margin: 0 2em 0 2em;
+/* margin: 0 2em 0 2em; */
 line-height: 1.25;
 }
 
