@@ -18,9 +18,9 @@ function updateButton() {
   const togglePlayBtn = document.querySelector('.toggle-play');
 
   if(this.paused) {
-    togglePlayBtn.innerHTML = `<svg class="" width="16" height="16" viewBox="0 0 16 16"><title>play</title><path d="M3 2l10 6-10 6z"></path></svg>`;
+    togglePlayBtn.innerHTML = `<svg class="" width="16" height="11" viewBox="0 0 16 16"><title>play</title><path d="M3 2l10 6-10 6z"></path></svg>`;
   } else {
-    togglePlayBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 16 16"><title>pause</title><path d="M2 2h5v12H2zm7 0h5v12H9z"></path></svg>`;
+    togglePlayBtn.innerHTML = `<svg width="16" height="11" viewBox="0 0 16 16"><title>pause</title><path d="M2 2h5v12H2zm7 0h5v12H9z"></path></svg>`;
   }
 }
 
@@ -58,3 +58,17 @@ progress.addEventListener('click', scrub);
 progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
 progress.addEventListener('mousedown', () => mousedown = true);
 progress.addEventListener('mouseup', () => mousedown = false);
+
+//NEW CODE
+var fullScreenButton = document.getElementById("full-screen");
+
+// Event listener for the full-screen button
+fullScreenButton.addEventListener("click", function() {
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  } else if (video.mozRequestFullScreen) {
+    video.mozRequestFullScreen(); // Firefox
+  } else if (video.webkitRequestFullscreen) {
+    video.webkitRequestFullscreen(); // Chrome and Safari
+  }
+})
