@@ -886,9 +886,9 @@ footer p {
   table p {
     line-height: 1.25;
   }*/
-  /* video {
+  video {
     width: 60vw;
-  } */
+  }
   footer {
     grid-column-start: 2;
     grid-row-start: 4;
