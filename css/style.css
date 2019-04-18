@@ -268,7 +268,7 @@ nav a.currentpage{
 	padding:21px 64px;
 	text-decoration:none;
   margin: 2em;
-  min-width: 200px;
+  min-width: 150px;
 }
 .downloadButton:hover {
 	background-color:#000000;
@@ -393,7 +393,7 @@ nav ul li {
 
 .top_project_image img {
   display: block;
-  width: 90%;
+  width: 100%;
   background-color: white;
   margin: 0 auto 0 auto;
 }
@@ -405,7 +405,7 @@ nav ul li {
   align-items: center;
   justify-content: center;
   margin: 0 auto 0 auto;
-  /* width: 90%; */
+  width: 100%;
   padding: 0 0 2em 0;
 }
 
@@ -417,10 +417,11 @@ nav ul li {
   font-weight: bold;
   font-size: 2em;
   margin: 2em 0;
+  text-align: center;
 }
 
 .project_description p {
-/* margin: 0 2em 0 2em; */
+margin: 0 2em 0 2em;
 line-height: 1.25;
 }
 
@@ -813,7 +814,7 @@ footer p {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
   } */
-  .gallery_project {
+  /* .gallery_project {} */
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex; */
     /* width: 18em; */
@@ -821,7 +822,7 @@ footer p {
     background-color: white;
     margin: 1em;
     align-items: center; */
-  }
+
   /*
   .gallery_thumb {
     padding: 1em 0 0 0;
@@ -840,11 +841,11 @@ footer p {
   /* .gallery_thumb_text p {
     font-size: 1em;
     line-height: 1.5; */
-  }
   .top_project_image img {
     padding: 0;
     width: 100%;
   }
+
   .project_description {
     /* height: auto;
     display: flex;
@@ -904,8 +905,8 @@ footer p {
     flex-direction: row; */
     justify-content: flex-start;
   }
+}
   /* footer li {
     list-style-type: none;
     padding: .5em;
   } */
-}
