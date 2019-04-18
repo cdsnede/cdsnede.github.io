@@ -502,7 +502,10 @@ td.accordion.active::after {
 video {
   width: 80vw;
 }
-
+.player-video {
+  display: block;
+  margin: 0 auto;
+}
 footer {
   display: flex;
   flex-direction: column;
