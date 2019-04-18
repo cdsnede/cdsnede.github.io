@@ -637,11 +637,10 @@ footer p {
   }
   .top_project_image img{
     display: block;
-    width: 90%;
+    width: 100%;
     background-color: white;
-    padding: 1em;
+    /* padding: 1em; */
     margin: 0 auto 0 auto;
-    width: 90%;
   }
   .project_description {
     background-color: white;
